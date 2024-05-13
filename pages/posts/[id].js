@@ -12,7 +12,7 @@ export default function Post({postData}) {
         <title>{postData.title}</title>
       </Head>
       {postData.id}
-      <Date dateString={postData.date} />
+      {/* <Date dateString={postData.date} /> */}
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
@@ -27,7 +27,6 @@ export default function Post({postData}) {
 export function getStaticPaths() {
   // Return a list of possible value for id
   const paths = getAllPostIds();
-  console.log('paths', paths);
   return {
     paths,
     fallback: false
